@@ -4,7 +4,10 @@ Performing Analysis on Kickstarter Data to uncover trends
     The purpose of this analysis is to help an upcoming playwright Louise who wants to start a crowdfunding campaingn to underplay fever. she is estimating a budget of $10,000.
 ## Analysis and Challenges
 ### The first step of the analysis is to take an initial look at the data.
-      By looking at the data provided we can understand how large is the data we are working with like number of rows and columns. Next to familiarizing with the type of data present and Checking whether all the data type is classified correctly. Also is the Data readable or does it need to convert. 
+      By looking at the data provided we can understand the following:
+      1. how large is the data we are working with like number of rows and columns. 
+      2. Familiarizing with the type of data present and Checking whether all the data type is classified correctly. 
+      3. Is the Data readable or does it need to convert. 
         **Observations**
             1. The differnt Data type present in the sheet are General, Accounting, etc.,
             2. Column I & J look like date but are not readable they contain unix timestamps rather than standard format.
@@ -15,13 +18,13 @@ Performing Analysis on Kickstarter Data to uncover trends
         3. Outcome column tells whether campaign was successful or not.
         4.Country column tells us which country campaign was started.
       To Organizing the data, we need to consider adding certain columns or use filter to omit certain data that we are not interested in/to single out specific data we want to learn more about. Here are the further analysis steps to organize the Kickstarter data.
- #### Percentage funding
+ #### Adding Percentage funding Column
         - Many of the campaigns missed their goal amount by a small margin. So to determine how much of the campaign goal was met,lets add a column "Percentage funded". Data from the Pledged and Goal columns will be used to find the percentage funded. 
- #### Average Donations
+ #### Adding Average Donations Column
         - Crowdfunding platforms, allows project creators to add incentives for different pledge amounts. We can determine how much money people have pledged to campaigns by add another column "Average Donations". Data from the Pledged column divide by the backers gives the Average Donations.
    **Observations**
         "Average Donations" column has an error `*#DIV/0!*`. Even though the formula is valid, Excel doesn't recognize a formula's output format. Kickstarter requires every campaign to have a fundraising goal. However, not every campaign has backers, which means, in some cases, there is no number to divide by in the formula. To address this error we will use `*iferror(value,value if error)*` formula . 
-  #### Subcategory
+  #### Spliting Category/Subcategory column to two distinct columns
         - To view our data in more detail, lets split our category and sub-category column into two distinct columns: "parent category" and "subcategory".    **To create a new Subcategory column:**
         1. select category and subcategory column.
         2. Copy the column
@@ -61,5 +64,7 @@ Performing Analysis on Kickstarter Data to uncover trends
          2. From the pop-up menu, select Chart Title **"Theater outcomes by Launch date"** followed by Centered Overlay.
 ## Results
 ### Theater Outcomes based on launch Date:
-    the month that launched the most successful Kickstarter campaigns was May. However, January, June, July and October all had roughly the same number of failed campaigns launched.
-         
+    1. The month that launched the most successful Kickstarter campaigns was May, but diminish by the end of the year.
+    2. January, June, July and October all had roughly the same number of failed campaigns launched.
+### Outcomes based on Goals:
+    Instead of one large spike, the lines trend all over and less predictable. 
