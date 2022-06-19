@@ -79,4 +79,4 @@ Add a title to your bar chart by completing the following steps:
 oucomes based on goals chart shows that instead of one large spike, the lines trend all over and less predictable. 
 Louise estimates her play costs arount $10,000. Lets look at the percentage success for a goal amount ranging from $10,000 to $15,000. The percentage successful was 54.17% anf percentage failure is around 45.83%. This means the chances of success and failure are almost same.
 ### Other Possible Analysis:
-By Using the statistical Analysis we can understand how the data is distributed and the central tendency, variance and outlier.
+By Using the statistical Analysis we can understand how the data is distributed and the central tendency, variance and outlier. 
