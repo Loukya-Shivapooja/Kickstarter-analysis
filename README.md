@@ -8,16 +8,20 @@ Performing Analysis on Kickstarter Data to uncover trends
       1. how large is the data we are working with like number of rows and columns. 
       2. Familiarizing with the type of data present and Checking whether all the data type is classified correctly. 
       3. Is the Data readable or does it need to convert. 
-        **Observations**
+   **Observations**
             1. The differnt Data type present in the sheet are General, Accounting, etc.,
             2. Column I & J look like date but are not readable they contain unix timestamps rather than standard format.
+                But to be sure that the data are timestamps, we can use a timestamp converter [Timestamp converter](https://www.epochconverter.com/).
 ### The next step in the analysis is to Organize the data.
       Before organizing the data,let us understand the data in each column that we are working with:
         1. Goal Column tells how much money each campaign will need to succeed.
         2. Pledge Column tells how much money each campaign actually made.
         3. Outcome column tells whether campaign was successful or not.
-        4.Country column tells us which country campaign was started.
-      To Organizing the data, we need to consider adding certain columns or use filter to omit certain data that we are not interested in/to single out specific data we want to learn more about. Here are the further analysis steps to organize the Kickstarter data.
+        4. Country column tells us which country campaign was started.
+        ![Data in each column](![Uploading Data in each column.png…](<img width="1440" alt="Data in each column" src="https://user-images.githubusercontent.com/107584361/174462359-4df321fd-e2f0-40cf-9fa4-b539006d93dd.png">)
+      To Organizing the data, we can use filters and formatting, and by freezing specific columns and rows. 
+      Here are the further analysis steps to organize the Kickstarter data.
+      Adding the columns to interpret the data more easily.
  #### Adding Percentage funding Column
         - Many of the campaigns missed their goal amount by a small margin. So to determine how much of the campaign goal was met,lets add a column "Percentage funded". Data from the Pledged and Goal columns will be used to find the percentage funded. 
  #### Adding Average Donations Column
@@ -25,7 +29,8 @@ Performing Analysis on Kickstarter Data to uncover trends
    **Observations**
         "Average Donations" column has an error `*#DIV/0!*`. Even though the formula is valid, Excel doesn't recognize a formula's output format. Kickstarter requires every campaign to have a fundraising goal. However, not every campaign has backers, which means, in some cases, there is no number to divide by in the formula. To address this error we will use `*iferror(value,value if error)*` formula . 
   #### Spliting Category/Subcategory column to two distinct columns
-        - To view our data in more detail, lets split our category and sub-category column into two distinct columns: "parent category" and "subcategory".    **To create a new Subcategory column:**
+        - To view our data in more detail, lets split our category and sub-category column into two distinct columns: "parent category" and "subcategory".
+        **To create a new Subcategory column:**
         1. select category and subcategory column.
         2. Copy the column
         3. paste the data into a new column 
@@ -67,4 +72,7 @@ Performing Analysis on Kickstarter Data to uncover trends
     1. The month that launched the most successful Kickstarter campaigns was May, but diminish by the end of the year.
     2. January, June, July and October all had roughly the same number of failed campaigns launched.
 ### Outcomes based on Goals:
-    Instead of one large spike, the lines trend all over and less predictable. 
+    oucomes based on goals chart shows that instead of one large spike, the lines trend all over and less predictable. 
+    Louise estimates her play costs arount $10,000. Lets look at the percentage success for a goal amount ranging from $10,000 to $15,000. The percentage successful was 54.17% anf percentage failure is around 45.83%. This means the chances of success and failure are almost same.
+### Other Possible Analysis:
+    By Using the statistical Analysis we can understand how the data is distributed and the central tendency, variance and outlier.
