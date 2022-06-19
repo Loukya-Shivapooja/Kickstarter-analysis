@@ -12,19 +12,22 @@ By looking at the data provided we can understand the following:
 **Observations**
 * The type of Data present in the sheet are General, Accounting, etc.,
 <img width="1440" alt="Type of Data" src="https://user-images.githubusercontent.com/107584361/174467671-75026183-a46a-4f89-88ce-0c76b76aaa5c.png">
-* Column I & J look like date but are not readable they contain unix timestamps rather than standard format.
+* Column I & J look like date but are not readable they contain unix timestamps rather than standard format. 
+
 But to be sure that the data are timestamps, we can use a timestamp converter [Timestamp converter](https://www.epochconverter.com/).
 
 ### The next step in the analysis is to Organize the data.
+Organizing the data helps to easily understand the data and generate insights.For that we will use filters and formating, and by freezing specific rows and columns.
+#### Hint
+
+This website helps us to understand in detail about different tools and procedure used in excel [Excel easy](https://www.excel-easy.com/).
+
 Before organizing the data,let us understand the data in each column that we are working with:
 1. Goal Column tells how much money each campaign will need to succeed.
 2. Pledge Column tells how much money each campaign actually made.
 3. Outcome column tells whether campaign was successful or not.
 4. Country column tells us which country campaign was started.
-
-To Organizing the data, we can use filters and formatting, and by freezing specific columns and rows. 
-Here are the further analysis steps to organize the Kickstarter data.
-Adding the columns to interpret the data more easily.
+Next to understand the data even more clearly lets Add a new columns to bring more information.
 #### Adding Percentage funding Column
 - Many of the campaigns missed their goal amount by a small margin. So to determine how much of the campaign goal was met,lets add a column "Percentage funded". Data from the Pledged and Goal columns will be used to find the percentage funded. 
 #### Adding Average Donations Column
@@ -73,10 +76,13 @@ Add a title to your bar chart by completing the following steps:
 2. From the pop-up menu, select Chart Title **"Theater outcomes by Launch date"** followed by Centered Overlay.
 ## Results
 ### Theater Outcomes based on launch Date:
+![Theater_Outcomes_vs_Launch](https://user-images.githubusercontent.com/107584361/174469235-eb445dbe-0768-4cbb-a41c-dc47df864d78.png)
 1. The month that launched the most successful Kickstarter campaigns was May, but diminish by the end of the year.
-2. January, June, July and October all had roughly the same number of failed campaigns launched.
+3. January, June, July and October all had roughly the same number of failed campaigns launched.
 ### Outcomes based on Goals:
-oucomes based on goals chart shows that instead of one large spike, the lines trend all over and less predictable. 
+![outcomes_vs_Goals](https://user-images.githubusercontent.com/107584361/174490060-d9bb13b8-ed07-4cfe-9ab6-dffe7d8d4573.png)
+
+Outcomes based on goals chart shows that instead of one large spike, the lines trend all over and less predictable. 
 Louise estimates her play costs arount $10,000. Lets look at the percentage success for a goal amount ranging from $10,000 to $15,000. The percentage successful was 54.17% anf percentage failure is around 45.83%. This means the chances of success and failure are almost same.
 ### Other Possible Analysis:
 By Using the statistical Analysis we can understand how the data is distributed and the central tendency, variance and outlier. 
