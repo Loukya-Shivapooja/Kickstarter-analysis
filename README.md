@@ -9,16 +9,16 @@ Performing Analysis on Kickstarter Data to uncover trends
       2. Familiarizing with the type of data present and Checking whether all the data type is classified correctly. 
       3. Is the Data readable or does it need to convert. 
    **Observations**
-            1. The differnt Data type present in the sheet are General, Accounting, etc.,
-            2. Column I & J look like date but are not readable they contain unix timestamps rather than standard format.
+1. The differnt Data type present in the sheet are General, Accounting, etc.,
+2. Column I & J look like date but are not readable they contain unix timestamps rather than standard format.
                 But to be sure that the data are timestamps, we can use a timestamp converter [Timestamp converter](https://www.epochconverter.com/).
 ### The next step in the analysis is to Organize the data.
-      Before organizing the data,let us understand the data in each column that we are working with:
-        1. Goal Column tells how much money each campaign will need to succeed.
-        2. Pledge Column tells how much money each campaign actually made.
-        3. Outcome column tells whether campaign was successful or not.
-        4. Country column tells us which country campaign was started.
-        ![Data in each column](![Uploading Data in each column.png…](<img width="1440" alt="Data in each column" src="https://user-images.githubusercontent.com/107584361/174462359-4df321fd-e2f0-40cf-9fa4-b539006d93dd.png">)
+Before organizing the data,let us understand the data in each column that we are working with:
+1. Goal Column tells how much money each campaign will need to succeed.
+2. Pledge Column tells how much money each campaign actually made.
+3. Outcome column tells whether campaign was successful or not.
+4. Country column tells us which country campaign was started.
+![Data in each column](https://user-images.githubusercontent.com/107584361/174462359-4df321fd-e2f0-40cf-9fa4-b539006d93dd.png)
       To Organizing the data, we can use filters and formatting, and by freezing specific columns and rows. 
       Here are the further analysis steps to organize the Kickstarter data.
       Adding the columns to interpret the data more easily.
